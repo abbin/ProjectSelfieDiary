@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(photoButton.frame.size)
+        print(view.frame.size)
     }
     
 //    override func viewDidLoad() {
