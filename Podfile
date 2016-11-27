@@ -7,6 +7,6 @@ target 'ProjectSelfieDiary' do
 
   # Pods for ProjectSelfieDiary
 
-pod 'BFPaperButton'
+pod 'PINCache'
 
 end

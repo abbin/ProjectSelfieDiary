@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0AD0BB4A92A7E15CDA2D402E6AF3639E'
-               BlueprintName = 'BFPaperButton'
+               BlueprintIdentifier = '6A4878A4A87B118BAF0877A103373708'
+               BlueprintName = 'PINCache'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'BFPaperButton.framework'>
+               BuildableName = 'PINCache.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

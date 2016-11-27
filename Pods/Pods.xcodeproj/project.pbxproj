@@ -7,85 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1E6808B4645087656F98D72398C7EC /* Pods-ProjectSelfieDiary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBBCB4338628EF36862B0F7C2C25F6 /* Pods-ProjectSelfieDiary-dummy.m */; };
-		17C718CA3D36C65305618530ADE3CCA8 /* BFPaperButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A0FA46A771F1D3DBFF04D87014DE77F /* BFPaperButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35B2CB3254D18DFB373741D2BC64B0DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		374950D0E01AE1218457FA953F1B1965 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8429F27FF9C4D60E2B9E8996AC22B8 /* BFPaperButton.m */; };
-		42F7705A141850E292B9CBE63B7D0C33 /* Pods-ProjectSelfieDiary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE1CBE477490198E4C4BAE67686A8FB /* Pods-ProjectSelfieDiary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B74132BFB0940A10B09CF5D4F86C2F8 /* BFPaperButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 460EAED2F6B40CC469DD1A3519DD15FF /* BFPaperButton-dummy.m */; };
-		D063B05C396E0F79974DEF371A5BD58D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		DEA2AEF28562AD6951D233089709E705 /* BFPaperButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 7165BA8EF52637012B4A8A38554AB3B1 /* BFPaperButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D9640855943F9785476A968C47E734C /* Pods-ProjectSelfieDiary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE1CBE477490198E4C4BAE67686A8FB /* Pods-ProjectSelfieDiary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E2ACAB5553AF46488DDAAF0B8537D2 /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E83FB19266EED868BEA2E4297A67F8D9 /* PINCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4D8A1FB7701C95E1B3CDCE125FA16463 /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BFC9ED993284C57B66D7C90A545213 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4E1C1B888CA1C3AF1299FB177B9AFA52 /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D337904F417F61283E5BD37C9F33FCA5 /* PINDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BB446FDD1F8B1C44D75CE5FD040C6BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		67EAAE4F53B8177F08279BB624BE5993 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		68A966DC9FE75F46B517A0A01458F0DD /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FBB79DF36917C12CFE7D389B5ED660 /* PINCache-dummy.m */; };
+		7D00332C0E554E00DCFAC03EDCCCA5FC /* Nullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8CB9A643684D27CB5D25E9578E04E3 /* Nullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99570E2EAF6E5338760FCB0E06DBBF89 /* Pods-ProjectSelfieDiary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBBCB4338628EF36862B0F7C2C25F6 /* Pods-ProjectSelfieDiary-dummy.m */; };
+		A4276999F7266A6C44E2CA706D24340F /* PINCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D90B8760C47EA62EE9489ED317491E7 /* PINCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B00EC20A95367E3634CC70121385F419 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 76E3B0DEBC454FED1BFA0BEF70B7E437 /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D15F7F93047B54CDC5A9AEB85AFCD5B6 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = E6BF748D5A963FEBBEBE96D4AA7CFFBA /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2E7CCC6FA04A436D5BCE04E5D639093 /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6938AD53B14F7B8F45CD8F9156AAB6DD /* PINMemoryCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D4AB193A949BDB9210C7A3F60D035693 /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B44C3C8C124F6DDA4B6B0242C84DE27B /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		16EE25550BD61A63D8CBE49099475528 /* PBXContainerItemProxy */ = {
+		1A04A9B799CCD38DF8595032A2569CF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0AD0BB4A92A7E15CDA2D402E6AF3639E;
-			remoteInfo = BFPaperButton;
+			remoteGlobalIDString = 6A4878A4A87B118BAF0877A103373708;
+			remoteInfo = PINCache;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BFPaperButton.xcconfig; sourceTree = "<group>"; };
 		0DBBBCB4338628EF36862B0F7C2C25F6 /* Pods-ProjectSelfieDiary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ProjectSelfieDiary-dummy.m"; sourceTree = "<group>"; };
-		1A0FA46A771F1D3DBFF04D87014DE77F /* BFPaperButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFPaperButton-umbrella.h"; sourceTree = "<group>"; };
-		460EAED2F6B40CC469DD1A3519DD15FF /* BFPaperButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BFPaperButton-dummy.m"; sourceTree = "<group>"; };
+		1327577720AE5BA19E06322675A960F4 /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PINCache.modulemap; sourceTree = "<group>"; };
+		19BFC9ED993284C57B66D7C90A545213 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = PINCache/PINDiskCache.m; sourceTree = "<group>"; };
+		1BBE9C04A3732F6DEB5DB812D69C7841 /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
+		24BE42A6B800C8ED7BC553F207AC3725 /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
+		3E8CB9A643684D27CB5D25E9578E04E3 /* Nullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nullability.h; path = PINCache/Nullability.h; sourceTree = "<group>"; };
 		51B4E172EF2C7B7FA03CE47D0983FDBC /* Pods-ProjectSelfieDiary-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ProjectSelfieDiary-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5722BAA12C92FEED9FF5E0D4EAD605F5 /* Pods-ProjectSelfieDiary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ProjectSelfieDiary.modulemap"; sourceTree = "<group>"; };
 		5B325FDC7990CB3EFB679441A94A0447 /* Pods-ProjectSelfieDiary-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ProjectSelfieDiary-acknowledgements.plist"; sourceTree = "<group>"; };
-		670C1E654AB88F7D054D5A66704CCCAD /* BFPaperButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFPaperButton-prefix.pch"; sourceTree = "<group>"; };
-		7165BA8EF52637012B4A8A38554AB3B1 /* BFPaperButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFPaperButton.h; path = Classes/BFPaperButton.h; sourceTree = "<group>"; };
-		717239124A8B5ACCE0C78902DA77E5A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6938AD53B14F7B8F45CD8F9156AAB6DD /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = PINCache/PINMemoryCache.m; sourceTree = "<group>"; };
+		6D90B8760C47EA62EE9489ED317491E7 /* PINCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-umbrella.h"; sourceTree = "<group>"; };
 		737CD9118A2AD35BA02EAAE4504FB7E0 /* Pods-ProjectSelfieDiary-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSelfieDiary-resources.sh"; sourceTree = "<group>"; };
-		741D02BA3EC12BD439533AAEE478A081 /* BFPaperButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BFPaperButton.framework; path = BFPaperButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AD8A47AEB23AE7F2CB04A2E72E5BF41 /* Pods_ProjectSelfieDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ProjectSelfieDiary.framework; path = "Pods-ProjectSelfieDiary.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E3B0DEBC454FED1BFA0BEF70B7E437 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = PINCache/PINCache.h; sourceTree = "<group>"; };
+		91FD7B88AB5862AAC8A675053F2C7A0B /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9399F0BFEF95277EEC2FE1D4E29EDD55 /* Pods-ProjectSelfieDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSelfieDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CE1CBE477490198E4C4BAE67686A8FB /* Pods-ProjectSelfieDiary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ProjectSelfieDiary-umbrella.h"; sourceTree = "<group>"; };
-		BE8429F27FF9C4D60E2B9E8996AC22B8 /* BFPaperButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFPaperButton.m; path = Classes/BFPaperButton.m; sourceTree = "<group>"; };
-		BFD5CD8895614445190D16533DD3209E /* BFPaperButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BFPaperButton.modulemap; sourceTree = "<group>"; };
+		A6C2E7BFEC3CA498DE261BAC78A402BA /* Pods_ProjectSelfieDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ProjectSelfieDiary.framework; path = "Pods-ProjectSelfieDiary.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8FBB79DF36917C12CFE7D389B5ED660 /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
+		B44C3C8C124F6DDA4B6B0242C84DE27B /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D337904F417F61283E5BD37C9F33FCA5 /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = PINCache/PINDiskCache.h; sourceTree = "<group>"; };
 		DAECD1120C434A5F8383DEF5616DC422 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E226E5C90147FC354B28C2801C366B0E /* Pods-ProjectSelfieDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSelfieDiary.release.xcconfig"; sourceTree = "<group>"; };
+		E6BF748D5A963FEBBEBE96D4AA7CFFBA /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = PINCache/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
+		E83FB19266EED868BEA2E4297A67F8D9 /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = PINCache/PINCache.m; sourceTree = "<group>"; };
 		F2804AB666BBC3942CEB5F112C2CB62A /* Pods-ProjectSelfieDiary-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSelfieDiary-frameworks.sh"; sourceTree = "<group>"; };
+		F3ED57AA4329B61F51795B37BD3D8D42 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C7C7028676C3A6A5536CD5080E9059A /* Frameworks */ = {
+		37FF3E6DD87189C874E974CBDD0ACA49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35B2CB3254D18DFB373741D2BC64B0DE /* Foundation.framework in Frameworks */,
+				5BB446FDD1F8B1C44D75CE5FD040C6BF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9028771DF9653AC8BC73B225852343ED /* Frameworks */ = {
+		C8B3FF982A89E6A02E8EF4E64214E31F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D063B05C396E0F79974DEF371A5BD58D /* Foundation.framework in Frameworks */,
+				67EAAE4F53B8177F08279BB624BE5993 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00868EB411DAE543EE738C11F1087C84 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BFD5CD8895614445190D16533DD3209E /* BFPaperButton.modulemap */,
-				06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */,
-				460EAED2F6B40CC469DD1A3519DD15FF /* BFPaperButton-dummy.m */,
-				670C1E654AB88F7D054D5A66704CCCAD /* BFPaperButton-prefix.pch */,
-				1A0FA46A771F1D3DBFF04D87014DE77F /* BFPaperButton-umbrella.h */,
-				717239124A8B5ACCE0C78902DA77E5A0 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/BFPaperButton";
-			sourceTree = "<group>";
-		};
 		320DE2A5B88F4F87F3B93FEAF9083CBB /* Pods-ProjectSelfieDiary */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,15 +102,18 @@
 			path = "Target Support Files/Pods-ProjectSelfieDiary";
 			sourceTree = "<group>";
 		};
-		6653AC39BA99D9F0FAE451B8001E75F3 /* BFPaperButton */ = {
+		56D1B4A15FBAEA499FCBD12523BD15EE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7165BA8EF52637012B4A8A38554AB3B1 /* BFPaperButton.h */,
-				BE8429F27FF9C4D60E2B9E8996AC22B8 /* BFPaperButton.m */,
-				00868EB411DAE543EE738C11F1087C84 /* Support Files */,
+				F3ED57AA4329B61F51795B37BD3D8D42 /* Info.plist */,
+				1327577720AE5BA19E06322675A960F4 /* PINCache.modulemap */,
+				24BE42A6B800C8ED7BC553F207AC3725 /* PINCache.xcconfig */,
+				A8FBB79DF36917C12CFE7D389B5ED660 /* PINCache-dummy.m */,
+				1BBE9C04A3732F6DEB5DB812D69C7841 /* PINCache-prefix.pch */,
+				6D90B8760C47EA62EE9489ED317491E7 /* PINCache-umbrella.h */,
 			);
-			name = BFPaperButton;
-			path = BFPaperButton;
+			name = "Support Files";
+			path = "../Target Support Files/PINCache";
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -136,18 +137,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A82CFEABBF2933676C56EA9F012B3A45 /* Pods */,
-				C9E99A9EE0A2EDE44AA09B3E456D9E76 /* Products */,
+				CFE6AEAA58EC394748C997B058E25D98 /* Pods */,
+				FE2DF10C95667E82C8064B4952F90061 /* Products */,
 				7B8C05291FF46BAFEAAAFD65FE0CB64C /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		A82CFEABBF2933676C56EA9F012B3A45 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6653AC39BA99D9F0FAE451B8001E75F3 /* BFPaperButton */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -158,11 +151,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C9E99A9EE0A2EDE44AA09B3E456D9E76 /* Products */ = {
+		CFE6AEAA58EC394748C997B058E25D98 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				741D02BA3EC12BD439533AAEE478A081 /* BFPaperButton.framework */,
-				7AD8A47AEB23AE7F2CB04A2E72E5BF41 /* Pods_ProjectSelfieDiary.framework */,
+				EC1EE330596ED1E4112A1C2824C4C34B /* PINCache */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC1EE330596ED1E4112A1C2824C4C34B /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CB9A643684D27CB5D25E9578E04E3 /* Nullability.h */,
+				76E3B0DEBC454FED1BFA0BEF70B7E437 /* PINCache.h */,
+				E83FB19266EED868BEA2E4297A67F8D9 /* PINCache.m */,
+				E6BF748D5A963FEBBEBE96D4AA7CFFBA /* PINCacheObjectSubscripting.h */,
+				D337904F417F61283E5BD37C9F33FCA5 /* PINDiskCache.h */,
+				19BFC9ED993284C57B66D7C90A545213 /* PINDiskCache.m */,
+				B44C3C8C124F6DDA4B6B0242C84DE27B /* PINMemoryCache.h */,
+				6938AD53B14F7B8F45CD8F9156AAB6DD /* PINMemoryCache.m */,
+				56D1B4A15FBAEA499FCBD12523BD15EE /* Support Files */,
+			);
+			name = PINCache;
+			path = PINCache;
+			sourceTree = "<group>";
+		};
+		FE2DF10C95667E82C8064B4952F90061 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91FD7B88AB5862AAC8A675053F2C7A0B /* PINCache.framework */,
+				A6C2E7BFEC3CA498DE261BAC78A402BA /* Pods_ProjectSelfieDiary.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,59 +188,63 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9817DF14EEF9C357B67C91EFC18C9612 /* Headers */ = {
+		A75896AD4AB66D33DDD2DEF68877D4BE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42F7705A141850E292B9CBE63B7D0C33 /* Pods-ProjectSelfieDiary-umbrella.h in Headers */,
+				7D00332C0E554E00DCFAC03EDCCCA5FC /* Nullability.h in Headers */,
+				A4276999F7266A6C44E2CA706D24340F /* PINCache-umbrella.h in Headers */,
+				B00EC20A95367E3634CC70121385F419 /* PINCache.h in Headers */,
+				D15F7F93047B54CDC5A9AEB85AFCD5B6 /* PINCacheObjectSubscripting.h in Headers */,
+				4E1C1B888CA1C3AF1299FB177B9AFA52 /* PINDiskCache.h in Headers */,
+				D4AB193A949BDB9210C7A3F60D035693 /* PINMemoryCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7FAA6E112641FBF33889C93501D8FE1 /* Headers */ = {
+		C3C846B8D63D21246EBF53D1CD6F597C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17C718CA3D36C65305618530ADE3CCA8 /* BFPaperButton-umbrella.h in Headers */,
-				DEA2AEF28562AD6951D233089709E705 /* BFPaperButton.h in Headers */,
+				0D9640855943F9785476A968C47E734C /* Pods-ProjectSelfieDiary-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0AD0BB4A92A7E15CDA2D402E6AF3639E /* BFPaperButton */ = {
+		16355A07F3EEFF9FBB56B0EC30A85F3A /* Pods-ProjectSelfieDiary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB5028EEC792B052877AACAAA6CCEBF5 /* Build configuration list for PBXNativeTarget "BFPaperButton" */;
+			buildConfigurationList = 9893FB0179B9A476E6365063888D44BE /* Build configuration list for PBXNativeTarget "Pods-ProjectSelfieDiary" */;
 			buildPhases = (
-				58ED52010260D07AEB2E5406948C754A /* Sources */,
-				9028771DF9653AC8BC73B225852343ED /* Frameworks */,
-				D7FAA6E112641FBF33889C93501D8FE1 /* Headers */,
+				DE7640F67D4016168F3B12EF7C4CA566 /* Sources */,
+				C8B3FF982A89E6A02E8EF4E64214E31F /* Frameworks */,
+				C3C846B8D63D21246EBF53D1CD6F597C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = BFPaperButton;
-			productName = BFPaperButton;
-			productReference = 741D02BA3EC12BD439533AAEE478A081 /* BFPaperButton.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		75B3EC5CF173CCE38F148023AA7F6B3B /* Pods-ProjectSelfieDiary */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36D1A1199D7FF7AEAFB4BDA99EED6F3C /* Build configuration list for PBXNativeTarget "Pods-ProjectSelfieDiary" */;
-			buildPhases = (
-				33F0F7FC66F1EBC406521A6FAEE70EF2 /* Sources */,
-				1C7C7028676C3A6A5536CD5080E9059A /* Frameworks */,
-				9817DF14EEF9C357B67C91EFC18C9612 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B272D6035DBA5D75A253D94D0434CE8D /* PBXTargetDependency */,
+				C569EBFE96277CF53B6531420E9C20A2 /* PBXTargetDependency */,
 			);
 			name = "Pods-ProjectSelfieDiary";
 			productName = "Pods-ProjectSelfieDiary";
-			productReference = 7AD8A47AEB23AE7F2CB04A2E72E5BF41 /* Pods_ProjectSelfieDiary.framework */;
+			productReference = A6C2E7BFEC3CA498DE261BAC78A402BA /* Pods_ProjectSelfieDiary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6A4878A4A87B118BAF0877A103373708 /* PINCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 483ECA1F8F3E1AF3A5A61F0D70AE8993 /* Build configuration list for PBXNativeTarget "PINCache" */;
+			buildPhases = (
+				06A5C791F37C3C61E858A02BAB9C23C0 /* Sources */,
+				37FF3E6DD87189C874E974CBDD0ACA49 /* Frameworks */,
+				A75896AD4AB66D33DDD2DEF68877D4BE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PINCache;
+			productName = PINCache;
+			productReference = 91FD7B88AB5862AAC8A675053F2C7A0B /* PINCache.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -242,78 +264,48 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C9E99A9EE0A2EDE44AA09B3E456D9E76 /* Products */;
+			productRefGroup = FE2DF10C95667E82C8064B4952F90061 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AD0BB4A92A7E15CDA2D402E6AF3639E /* BFPaperButton */,
-				75B3EC5CF173CCE38F148023AA7F6B3B /* Pods-ProjectSelfieDiary */,
+				6A4878A4A87B118BAF0877A103373708 /* PINCache */,
+				16355A07F3EEFF9FBB56B0EC30A85F3A /* Pods-ProjectSelfieDiary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33F0F7FC66F1EBC406521A6FAEE70EF2 /* Sources */ = {
+		06A5C791F37C3C61E858A02BAB9C23C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C1E6808B4645087656F98D72398C7EC /* Pods-ProjectSelfieDiary-dummy.m in Sources */,
+				68A966DC9FE75F46B517A0A01458F0DD /* PINCache-dummy.m in Sources */,
+				27E2ACAB5553AF46488DDAAF0B8537D2 /* PINCache.m in Sources */,
+				4D8A1FB7701C95E1B3CDCE125FA16463 /* PINDiskCache.m in Sources */,
+				D2E7CCC6FA04A436D5BCE04E5D639093 /* PINMemoryCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58ED52010260D07AEB2E5406948C754A /* Sources */ = {
+		DE7640F67D4016168F3B12EF7C4CA566 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B74132BFB0940A10B09CF5D4F86C2F8 /* BFPaperButton-dummy.m in Sources */,
-				374950D0E01AE1218457FA953F1B1965 /* BFPaperButton.m in Sources */,
+				99570E2EAF6E5338760FCB0E06DBBF89 /* Pods-ProjectSelfieDiary-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B272D6035DBA5D75A253D94D0434CE8D /* PBXTargetDependency */ = {
+		C569EBFE96277CF53B6531420E9C20A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = BFPaperButton;
-			target = 0AD0BB4A92A7E15CDA2D402E6AF3639E /* BFPaperButton */;
-			targetProxy = 16EE25550BD61A63D8CBE49099475528 /* PBXContainerItemProxy */;
+			name = PINCache;
+			target = 6A4878A4A87B118BAF0877A103373708 /* PINCache */;
+			targetProxy = 1A04A9B799CCD38DF8595032A2569CF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		028E506FC798472BAFA1DAF05AE05C7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BFPaperButton/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BFPaperButton/BFPaperButton.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = BFPaperButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,7 +350,71 @@
 			};
 			name = Debug;
 		};
-		B7B77A886B98C43B694EFBDE4DE1919C /* Debug */ = {
+		224EFA65871AC90E0490E0F893CDEE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BE42A6B800C8ED7BC553F207AC3725 /* PINCache.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5B0D65D4085A183FB636BAB09B499694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BE42A6B800C8ED7BC553F207AC3725 /* PINCache.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6DEC3804B2841AA371944F89C0105AF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9399F0BFEF95277EEC2FE1D4E29EDD55 /* Pods-ProjectSelfieDiary.debug.xcconfig */;
 			buildSettings = {
@@ -392,38 +448,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		E5606A5C0F8F1C44954FD55AEA754C2C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BFPaperButton/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BFPaperButton/BFPaperButton.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = BFPaperButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -465,7 +489,7 @@
 			};
 			name = Release;
 		};
-		F5AFC20059A9CA97F7B2215B44C02B3D /* Release */ = {
+		FF9536BD4A9AE17EE0B436977459C09C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E226E5C90147FC354B28C2801C366B0E /* Pods-ProjectSelfieDiary.release.xcconfig */;
 			buildSettings = {
@@ -512,20 +536,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36D1A1199D7FF7AEAFB4BDA99EED6F3C /* Build configuration list for PBXNativeTarget "Pods-ProjectSelfieDiary" */ = {
+		483ECA1F8F3E1AF3A5A61F0D70AE8993 /* Build configuration list for PBXNativeTarget "PINCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7B77A886B98C43B694EFBDE4DE1919C /* Debug */,
-				F5AFC20059A9CA97F7B2215B44C02B3D /* Release */,
+				224EFA65871AC90E0490E0F893CDEE68 /* Debug */,
+				5B0D65D4085A183FB636BAB09B499694 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB5028EEC792B052877AACAAA6CCEBF5 /* Build configuration list for PBXNativeTarget "BFPaperButton" */ = {
+		9893FB0179B9A476E6365063888D44BE /* Build configuration list for PBXNativeTarget "Pods-ProjectSelfieDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				028E506FC798472BAFA1DAF05AE05C7B /* Debug */,
-				E5606A5C0F8F1C44954FD55AEA754C2C /* Release */,
+				6DEC3804B2841AA371944F89C0105AF5 /* Debug */,
+				FF9536BD4A9AE17EE0B436977459C09C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
