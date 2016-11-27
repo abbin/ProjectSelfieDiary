@@ -12,6 +12,92 @@ import Photos
 
 class ViewController: UIViewController {
     
+    private enum SessionSetupResult {
+        case success
+        case notAuthorized
+        case configurationFailed
+    }
+    
+    // MARK: -
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MARK:IBOutlet And Variables -
+    
+    @IBOutlet private weak var previewView: PreviewView!
+    @IBOutlet weak var photoButton: UIButton!
+    
+    private let session = AVCaptureSession()
+    
+    private var isSessionRunning = false
+    
+    private let sessionQueue = DispatchQueue(label: "session queue", attributes: [], target: nil)
+    
+    private var setupResult: SessionSetupResult = .success
+    
+    var videoDeviceInput: AVCaptureDeviceInput!
+    
+    private let photoOutput = AVCapturePhotoOutput()
+    
+    private var inProgressPhotoCaptureDelegates = [Int64 : PhotoCaptureDelegate]()
+    
+    private var sessionRunningObserveContext = 0
+    
+    // MARK: -
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MARK:IBAction -
+    
+    @IBAction private func focusAndExposeTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        let devicePoint = self.previewView.videoPreviewLayer.captureDevicePointOfInterest(for: gestureRecognizer.location(in: gestureRecognizer.view))
+        focus(with: .autoFocus, exposureMode: .autoExpose, at: devicePoint, monitorSubjectAreaChange: true)
+    }
+    
+    @IBAction private func capturePhoto(_ photoButton: UIButton) {
+        
+        let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection.videoOrientation
+        
+        sessionQueue.async {
+            if let photoOutputConnection = self.photoOutput.connection(withMediaType: AVMediaTypeVideo) {
+                photoOutputConnection.videoOrientation = videoPreviewLayerOrientation
+            }
+            
+            let photoSettings = AVCapturePhotoSettings()
+            
+            let supportedFlashModes = self.photoOutput.supportedFlashModes
+            if supportedFlashModes.contains(2){
+                photoSettings.flashMode = .auto
+            }
+            else{
+                photoSettings.flashMode = .off
+            }
+            
+            photoSettings.isHighResolutionPhotoEnabled = true
+            if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
+                photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
+            }
+            
+            let photoCaptureDelegate = PhotoCaptureDelegate(with: photoSettings, willCapturePhotoAnimation: {
+                DispatchQueue.main.async { [unowned self] in
+                    self.previewView.videoPreviewLayer.opacity = 0
+                    UIView.animate(withDuration: 0.25) { [unowned self] in
+                        self.previewView.videoPreviewLayer.opacity = 1
+                    }
+                }
+            }, capturingLivePhoto: { capturing in
+                
+            }, completed: { [unowned self] photoCaptureDelegate in
+                self.sessionQueue.async { [unowned self] in
+                    self.inProgressPhotoCaptureDelegates[photoCaptureDelegate.requestedPhotoSettings.uniqueID] = nil
+                }
+                }
+            )
+            self.inProgressPhotoCaptureDelegates[photoCaptureDelegate.requestedPhotoSettings.uniqueID] = photoCaptureDelegate
+            self.photoOutput.capturePhoto(with: photoSettings, delegate: photoCaptureDelegate)
+        }
+    }
+    
+    // MARK: -
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MARK:Initial Methods -
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print(view.frame.size)
@@ -26,7 +112,6 @@ class ViewController: UIViewController {
         switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
         case .authorized:
             break
-            
         case .notDetermined:
             sessionQueue.suspend()
             AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { [unowned self] granted in
@@ -35,10 +120,10 @@ class ViewController: UIViewController {
                 }
                 self.sessionQueue.resume()
             })
-            
         default:
             setupResult = .notAuthorized
         }
+        
         sessionQueue.async { [unowned self] in
             self.configureSession()
         }
@@ -53,7 +138,6 @@ class ViewController: UIViewController {
                 self.addObservers()
                 self.session.startRunning()
                 self.isSessionRunning = self.session.isRunning
-                
             case .notAuthorized:
                 DispatchQueue.main.async { [unowned self] in
                     let appName = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
@@ -66,7 +150,6 @@ class ViewController: UIViewController {
                     
                     self.present(alertController, animated: true, completion: nil)
                 }
-                
             case .configurationFailed:
                 DispatchQueue.main.async { [unowned self] in
                     let appName = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
@@ -87,7 +170,6 @@ class ViewController: UIViewController {
                 self.removeObservers()
             }
         }
-        
         super.viewWillDisappear(animated)
     }
     
@@ -108,24 +190,77 @@ class ViewController: UIViewController {
         }
     }
     
-    private enum SessionSetupResult {
-        case success
-        case notAuthorized
-        case configurationFailed
+    // MARK: -
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MARK:Notification Methods -
+    
+    private func addObservers() {
+        session.addObserver(self, forKeyPath: "running", options: .new, context: &sessionRunningObserveContext)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(subjectAreaDidChange), name: Notification.Name("AVCaptureDeviceSubjectAreaDidChangeNotification"), object: videoDeviceInput.device)
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionRuntimeError), name: Notification.Name("AVCaptureSessionRuntimeErrorNotification"), object: session)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionWasInterrupted), name: Notification.Name("AVCaptureSessionWasInterruptedNotification"), object: session)
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionInterruptionEnded), name: Notification.Name("AVCaptureSessionInterruptionEndedNotification"), object: session)
     }
     
-    private let session = AVCaptureSession()
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self)
+        
+        session.removeObserver(self, forKeyPath: "running", context: &sessionRunningObserveContext)
+    }
     
-    private var isSessionRunning = false
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if context == &sessionRunningObserveContext {
+            let newValue = change?[.newKey] as AnyObject?
+            guard let isSessionRunning = newValue?.boolValue else { return }
+            
+            DispatchQueue.main.async { [unowned self] in
+                self.photoButton.isEnabled = isSessionRunning
+            }
+        }
+        else {
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+        }
+    }
     
-    private let sessionQueue = DispatchQueue(label: "session queue", attributes: [], target: nil) // Communicate with the session and other session objects on this queue.
+    func subjectAreaDidChange(notification: NSNotification) {
+        let devicePoint = CGPoint(x: 0.5, y: 0.5)
+        focus(with: .autoFocus, exposureMode: .continuousAutoExposure, at: devicePoint, monitorSubjectAreaChange: false)
+    }
     
-    private var setupResult: SessionSetupResult = .success
+    func sessionRuntimeError(notification: NSNotification) {
+        guard let errorValue = notification.userInfo?[AVCaptureSessionErrorKey] as? NSError else {
+            return
+        }
+        
+        let error = AVError(_nsError: errorValue)
+        print("Capture session runtime error: \(error)")
+        
+        if error.code == .mediaServicesWereReset {
+            sessionQueue.async { [unowned self] in
+                if self.isSessionRunning {
+                    self.session.startRunning()
+                    self.isSessionRunning = self.session.isRunning
+                }
+            }
+        }
+    }
     
-    var videoDeviceInput: AVCaptureDeviceInput!
-
-    @IBOutlet private weak var previewView: PreviewView!
-
+    func sessionWasInterrupted(notification: NSNotification) {
+        if let userInfoValue = notification.userInfo?[AVCaptureSessionInterruptionReasonKey] as AnyObject?, let reasonIntegerValue = userInfoValue.integerValue, let reason = AVCaptureSessionInterruptionReason(rawValue: reasonIntegerValue) {
+            print("Capture session was interrupted with reason \(reason)")
+        }
+    }
+    
+    func sessionInterruptionEnded(notification: NSNotification) {
+        print("Capture session interruption ended")
+    }
+    
+    // MARK: -
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MARK:Utility -
+    
     private func configureSession() {
         if setupResult != .success {
             return
@@ -190,11 +325,6 @@ class ViewController: UIViewController {
         session.commitConfiguration()
     }
     
-    @IBAction private func focusAndExposeTap(_ gestureRecognizer: UITapGestureRecognizer) {
-        let devicePoint = self.previewView.videoPreviewLayer.captureDevicePointOfInterest(for: gestureRecognizer.location(in: gestureRecognizer.view))
-        focus(with: .autoFocus, exposureMode: .autoExpose, at: devicePoint, monitorSubjectAreaChange: true)
-    }
-    
     private func focus(with focusMode: AVCaptureFocusMode, exposureMode: AVCaptureExposureMode, at devicePoint: CGPoint, monitorSubjectAreaChange: Bool) {
         sessionQueue.async { [unowned self] in
             if let device = self.videoDeviceInput.device {
@@ -220,123 +350,11 @@ class ViewController: UIViewController {
             }
         }
     }
-
-    private let photoOutput = AVCapturePhotoOutput()
-    
-    private var inProgressPhotoCaptureDelegates = [Int64 : PhotoCaptureDelegate]()
-    
-    @IBOutlet weak var photoButton: UIButton!
-
-    
-    @IBAction private func capturePhoto(_ photoButton: UIButton) {
-
-        let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection.videoOrientation
-        
-        sessionQueue.async {
-            if let photoOutputConnection = self.photoOutput.connection(withMediaType: AVMediaTypeVideo) {
-                photoOutputConnection.videoOrientation = videoPreviewLayerOrientation
-            }
-            
-            let photoSettings = AVCapturePhotoSettings()
-            
-            let supportedFlashModes = self.photoOutput.supportedFlashModes
-            if supportedFlashModes.contains(2){
-                photoSettings.flashMode = .auto
-            }
-            else{
-                photoSettings.flashMode = .off
-            }
-            
-            photoSettings.isHighResolutionPhotoEnabled = true
-            if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
-                photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
-            }
-            
-            let photoCaptureDelegate = PhotoCaptureDelegate(with: photoSettings, willCapturePhotoAnimation: {
-                DispatchQueue.main.async { [unowned self] in
-                    self.previewView.videoPreviewLayer.opacity = 0
-                    UIView.animate(withDuration: 0.25) { [unowned self] in
-                        self.previewView.videoPreviewLayer.opacity = 1
-                    }
-                }
-            }, capturingLivePhoto: { capturing in
-
-            }, completed: { [unowned self] photoCaptureDelegate in
-                self.sessionQueue.async { [unowned self] in
-                    self.inProgressPhotoCaptureDelegates[photoCaptureDelegate.requestedPhotoSettings.uniqueID] = nil
-                }
-                }
-            )
-            self.inProgressPhotoCaptureDelegates[photoCaptureDelegate.requestedPhotoSettings.uniqueID] = photoCaptureDelegate
-            self.photoOutput.capturePhoto(with: photoSettings, delegate: photoCaptureDelegate)
-        }
-    }
-
-    private var sessionRunningObserveContext = 0
-    
-    private func addObservers() {
-        session.addObserver(self, forKeyPath: "running", options: .new, context: &sessionRunningObserveContext)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(subjectAreaDidChange), name: Notification.Name("AVCaptureDeviceSubjectAreaDidChangeNotification"), object: videoDeviceInput.device)
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionRuntimeError), name: Notification.Name("AVCaptureSessionRuntimeErrorNotification"), object: session)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionWasInterrupted), name: Notification.Name("AVCaptureSessionWasInterruptedNotification"), object: session)
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionInterruptionEnded), name: Notification.Name("AVCaptureSessionInterruptionEndedNotification"), object: session)
-    }
-    
-    private func removeObservers() {
-        NotificationCenter.default.removeObserver(self)
-        
-        session.removeObserver(self, forKeyPath: "running", context: &sessionRunningObserveContext)
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if context == &sessionRunningObserveContext {
-            let newValue = change?[.newKey] as AnyObject?
-            guard let isSessionRunning = newValue?.boolValue else { return }
-            
-            DispatchQueue.main.async { [unowned self] in
-                self.photoButton.isEnabled = isSessionRunning
-            }
-        }
-        else {
-            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
-        }
-    }
-    
-    func subjectAreaDidChange(notification: NSNotification) {
-        let devicePoint = CGPoint(x: 0.5, y: 0.5)
-        focus(with: .autoFocus, exposureMode: .continuousAutoExposure, at: devicePoint, monitorSubjectAreaChange: false)
-    }
-    
-    func sessionRuntimeError(notification: NSNotification) {
-        guard let errorValue = notification.userInfo?[AVCaptureSessionErrorKey] as? NSError else {
-            return
-        }
-        
-        let error = AVError(_nsError: errorValue)
-        print("Capture session runtime error: \(error)")
-
-        if error.code == .mediaServicesWereReset {
-            sessionQueue.async { [unowned self] in
-                if self.isSessionRunning {
-                    self.session.startRunning()
-                    self.isSessionRunning = self.session.isRunning
-                }
-            }
-        }
-    }
-    
-    func sessionWasInterrupted(notification: NSNotification) {
-        if let userInfoValue = notification.userInfo?[AVCaptureSessionInterruptionReasonKey] as AnyObject?, let reasonIntegerValue = userInfoValue.integerValue, let reason = AVCaptureSessionInterruptionReason(rawValue: reasonIntegerValue) {
-            print("Capture session was interrupted with reason \(reason)")
-        }
-    }
-    
-    func sessionInterruptionEnded(notification: NSNotification) {
-        print("Capture session interruption ended")
-    }
 }
+
+// MARK: -
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MARK:Extension -
 
 extension UIDeviceOrientation {
     var videoOrientation: AVCaptureVideoOrientation? {
@@ -371,9 +389,7 @@ extension AVCaptureDeviceDiscoverySession {
                 uniqueDevicePositions.append(device.position)
             }
         }
-        
         return uniqueDevicePositions.count
     }
 }
-
 
