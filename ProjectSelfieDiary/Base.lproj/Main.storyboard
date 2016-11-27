@@ -36,49 +36,46 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiT-QB-JWC">
                                 <rect key="frame" x="0.0" y="499" width="375" height="168"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-Bu-XwY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52o-XK-90r">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="vyu-Bu-XwY" secondAttribute="height" id="hvb-do-alQ"/>
+                                            <constraint firstAttribute="width" secondItem="52o-XK-90r" secondAttribute="height" multiplier="1:1" id="5M7-Db-K7d"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                        <state key="normal" title="G">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" red="0.29730179909999999" green="0.84926223749999996" blue="0.39087057110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" image="Gallery"/>
+                                        <state key="highlighted" image="GalleryHighlight"/>
                                     </button>
-                                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0b6-22-NsF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoJ-rN-7Jm">
                                         <rect key="frame" x="0.0" y="84" width="84" height="84"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="0b6-22-NsF" secondAttribute="height" multiplier="1:1" id="l1h-uo-ZbP"/>
+                                            <constraint firstAttribute="width" secondItem="hoJ-rN-7Jm" secondAttribute="height" multiplier="1:1" id="3sP-Yt-Lp8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
-                                        <state key="normal" title="S">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <state key="normal" image="Settings"/>
+                                        <state key="highlighted" image="SettingsHighlight"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR6-nf-7AG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-bB-4WW">
                                         <rect key="frame" x="84" y="0.0" width="291" height="168"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="ShutterButton"/>
+                                        <state key="highlighted" image="ShutterButtonHighlight"/>
                                         <connections>
-                                            <action selector="capturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuF-lZ-Em7"/>
+                                            <action selector="capturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddi-fb-w89"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="iR6-nf-7AG" firstAttribute="top" secondItem="IiT-QB-JWC" secondAttribute="top" id="HOa-Hu-GCz"/>
-                                    <constraint firstAttribute="bottom" secondItem="0b6-22-NsF" secondAttribute="bottom" id="LdW-wQ-DLh"/>
-                                    <constraint firstItem="0b6-22-NsF" firstAttribute="top" secondItem="vyu-Bu-XwY" secondAttribute="bottom" id="NiY-A6-qZv"/>
-                                    <constraint firstAttribute="trailing" secondItem="iR6-nf-7AG" secondAttribute="trailing" id="OOT-55-MqK"/>
-                                    <constraint firstItem="0b6-22-NsF" firstAttribute="height" secondItem="vyu-Bu-XwY" secondAttribute="height" id="YEg-1O-vSk"/>
-                                    <constraint firstAttribute="bottom" secondItem="iR6-nf-7AG" secondAttribute="bottom" id="bjt-YR-Dt2"/>
-                                    <constraint firstItem="vyu-Bu-XwY" firstAttribute="top" secondItem="IiT-QB-JWC" secondAttribute="top" id="iX0-e3-OdI"/>
-                                    <constraint firstItem="vyu-Bu-XwY" firstAttribute="leading" secondItem="IiT-QB-JWC" secondAttribute="leading" id="ki4-F9-EcY"/>
-                                    <constraint firstItem="0b6-22-NsF" firstAttribute="leading" secondItem="IiT-QB-JWC" secondAttribute="leading" id="tE8-2y-MEU"/>
-                                    <constraint firstItem="iR6-nf-7AG" firstAttribute="leading" secondItem="0b6-22-NsF" secondAttribute="trailing" id="xqS-pV-ppV"/>
+                                    <constraint firstAttribute="bottom" secondItem="TtU-bB-4WW" secondAttribute="bottom" id="4AN-iW-Oe3"/>
+                                    <constraint firstItem="hoJ-rN-7Jm" firstAttribute="top" secondItem="52o-XK-90r" secondAttribute="bottom" id="Rzh-cv-0xU"/>
+                                    <constraint firstItem="52o-XK-90r" firstAttribute="leading" secondItem="IiT-QB-JWC" secondAttribute="leading" id="Slg-kP-NMr"/>
+                                    <constraint firstItem="hoJ-rN-7Jm" firstAttribute="leading" secondItem="IiT-QB-JWC" secondAttribute="leading" id="WkK-hS-six"/>
+                                    <constraint firstItem="hoJ-rN-7Jm" firstAttribute="height" secondItem="52o-XK-90r" secondAttribute="height" id="azv-Re-mty"/>
+                                    <constraint firstAttribute="trailing" secondItem="TtU-bB-4WW" secondAttribute="trailing" id="c8L-WH-ZtH"/>
+                                    <constraint firstItem="TtU-bB-4WW" firstAttribute="top" secondItem="IiT-QB-JWC" secondAttribute="top" id="e0f-yC-8DK"/>
+                                    <constraint firstItem="TtU-bB-4WW" firstAttribute="leading" secondItem="hoJ-rN-7Jm" secondAttribute="trailing" id="nog-Aq-MpJ"/>
+                                    <constraint firstItem="52o-XK-90r" firstAttribute="top" secondItem="IiT-QB-JWC" secondAttribute="top" id="sTv-kM-gC3"/>
+                                    <constraint firstAttribute="bottom" secondItem="hoJ-rN-7Jm" secondAttribute="bottom" id="zdM-aW-Pst"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -94,7 +91,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="photoButton" destination="iR6-nf-7AG" id="lJU-9p-Hj2"/>
+                        <outlet property="photoButton" destination="TtU-bB-4WW" id="ltV-1u-nze"/>
                         <outlet property="previewView" destination="YFp-x0-Pmc" id="U69-99-f32"/>
                     </connections>
                 </viewController>
@@ -109,6 +106,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ShutterButton" width="249" height="142"/>
+        <image name="Gallery" width="92" height="92"/>
+        <image name="GalleryHighlight" width="92" height="92"/>
+        <image name="Settings" width="92" height="92"/>
+        <image name="SettingsHighlight" width="92" height="92"/>
+        <image name="ShutterButton" width="321" height="185"/>
+        <image name="ShutterButtonHighlight" width="321" height="185"/>
     </resources>
 </document>

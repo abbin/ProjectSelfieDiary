@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C1E6808B4645087656F98D72398C7EC /* Pods-ProjectSelfieDiary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBBBCB4338628EF36862B0F7C2C25F6 /* Pods-ProjectSelfieDiary-dummy.m */; };
+		17C718CA3D36C65305618530ADE3CCA8 /* BFPaperButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A0FA46A771F1D3DBFF04D87014DE77F /* BFPaperButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35B2CB3254D18DFB373741D2BC64B0DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		374950D0E01AE1218457FA953F1B1965 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8429F27FF9C4D60E2B9E8996AC22B8 /* BFPaperButton.m */; };
+		42F7705A141850E292B9CBE63B7D0C33 /* Pods-ProjectSelfieDiary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE1CBE477490198E4C4BAE67686A8FB /* Pods-ProjectSelfieDiary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B74132BFB0940A10B09CF5D4F86C2F8 /* BFPaperButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 460EAED2F6B40CC469DD1A3519DD15FF /* BFPaperButton-dummy.m */; };
+		D063B05C396E0F79974DEF371A5BD58D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		DEA2AEF28562AD6951D233089709E705 /* BFPaperButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 7165BA8EF52637012B4A8A38554AB3B1 /* BFPaperButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16EE25550BD61A63D8CBE49099475528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AD0BB4A92A7E15CDA2D402E6AF3639E;
+			remoteInfo = BFPaperButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BFPaperButton.xcconfig; sourceTree = "<group>"; };
+		0DBBBCB4338628EF36862B0F7C2C25F6 /* Pods-ProjectSelfieDiary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ProjectSelfieDiary-dummy.m"; sourceTree = "<group>"; };
+		1A0FA46A771F1D3DBFF04D87014DE77F /* BFPaperButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFPaperButton-umbrella.h"; sourceTree = "<group>"; };
+		460EAED2F6B40CC469DD1A3519DD15FF /* BFPaperButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BFPaperButton-dummy.m"; sourceTree = "<group>"; };
+		51B4E172EF2C7B7FA03CE47D0983FDBC /* Pods-ProjectSelfieDiary-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ProjectSelfieDiary-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5722BAA12C92FEED9FF5E0D4EAD605F5 /* Pods-ProjectSelfieDiary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ProjectSelfieDiary.modulemap"; sourceTree = "<group>"; };
+		5B325FDC7990CB3EFB679441A94A0447 /* Pods-ProjectSelfieDiary-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ProjectSelfieDiary-acknowledgements.plist"; sourceTree = "<group>"; };
+		670C1E654AB88F7D054D5A66704CCCAD /* BFPaperButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFPaperButton-prefix.pch"; sourceTree = "<group>"; };
+		7165BA8EF52637012B4A8A38554AB3B1 /* BFPaperButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFPaperButton.h; path = Classes/BFPaperButton.h; sourceTree = "<group>"; };
+		717239124A8B5ACCE0C78902DA77E5A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		737CD9118A2AD35BA02EAAE4504FB7E0 /* Pods-ProjectSelfieDiary-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSelfieDiary-resources.sh"; sourceTree = "<group>"; };
+		741D02BA3EC12BD439533AAEE478A081 /* BFPaperButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BFPaperButton.framework; path = BFPaperButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD8A47AEB23AE7F2CB04A2E72E5BF41 /* Pods_ProjectSelfieDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ProjectSelfieDiary.framework; path = "Pods-ProjectSelfieDiary.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9399F0BFEF95277EEC2FE1D4E29EDD55 /* Pods-ProjectSelfieDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSelfieDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CE1CBE477490198E4C4BAE67686A8FB /* Pods-ProjectSelfieDiary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ProjectSelfieDiary-umbrella.h"; sourceTree = "<group>"; };
+		BE8429F27FF9C4D60E2B9E8996AC22B8 /* BFPaperButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFPaperButton.m; path = Classes/BFPaperButton.m; sourceTree = "<group>"; };
+		BFD5CD8895614445190D16533DD3209E /* BFPaperButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BFPaperButton.modulemap; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DAECD1120C434A5F8383DEF5616DC422 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E226E5C90147FC354B28C2801C366B0E /* Pods-ProjectSelfieDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSelfieDiary.release.xcconfig"; sourceTree = "<group>"; };
+		F2804AB666BBC3942CEB5F112C2CB62A /* Pods-ProjectSelfieDiary-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSelfieDiary-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C7C7028676C3A6A5536CD5080E9059A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B2CB3254D18DFB373741D2BC64B0DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9028771DF9653AC8BC73B225852343ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D063B05C396E0F79974DEF371A5BD58D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00868EB411DAE543EE738C11F1087C84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFD5CD8895614445190D16533DD3209E /* BFPaperButton.modulemap */,
+				06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */,
+				460EAED2F6B40CC469DD1A3519DD15FF /* BFPaperButton-dummy.m */,
+				670C1E654AB88F7D054D5A66704CCCAD /* BFPaperButton-prefix.pch */,
+				1A0FA46A771F1D3DBFF04D87014DE77F /* BFPaperButton-umbrella.h */,
+				717239124A8B5ACCE0C78902DA77E5A0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BFPaperButton";
+			sourceTree = "<group>";
+		};
+		320DE2A5B88F4F87F3B93FEAF9083CBB /* Pods-ProjectSelfieDiary */ = {
+			isa = PBXGroup;
+			children = (
+				DAECD1120C434A5F8383DEF5616DC422 /* Info.plist */,
+				5722BAA12C92FEED9FF5E0D4EAD605F5 /* Pods-ProjectSelfieDiary.modulemap */,
+				51B4E172EF2C7B7FA03CE47D0983FDBC /* Pods-ProjectSelfieDiary-acknowledgements.markdown */,
+				5B325FDC7990CB3EFB679441A94A0447 /* Pods-ProjectSelfieDiary-acknowledgements.plist */,
+				0DBBBCB4338628EF36862B0F7C2C25F6 /* Pods-ProjectSelfieDiary-dummy.m */,
+				F2804AB666BBC3942CEB5F112C2CB62A /* Pods-ProjectSelfieDiary-frameworks.sh */,
+				737CD9118A2AD35BA02EAAE4504FB7E0 /* Pods-ProjectSelfieDiary-resources.sh */,
+				9CE1CBE477490198E4C4BAE67686A8FB /* Pods-ProjectSelfieDiary-umbrella.h */,
+				9399F0BFEF95277EEC2FE1D4E29EDD55 /* Pods-ProjectSelfieDiary.debug.xcconfig */,
+				E226E5C90147FC354B28C2801C366B0E /* Pods-ProjectSelfieDiary.release.xcconfig */,
+			);
+			name = "Pods-ProjectSelfieDiary";
+			path = "Target Support Files/Pods-ProjectSelfieDiary";
+			sourceTree = "<group>";
+		};
+		6653AC39BA99D9F0FAE451B8001E75F3 /* BFPaperButton */ = {
+			isa = PBXGroup;
+			children = (
+				7165BA8EF52637012B4A8A38554AB3B1 /* BFPaperButton.h */,
+				BE8429F27FF9C4D60E2B9E8996AC22B8 /* BFPaperButton.m */,
+				00868EB411DAE543EE738C11F1087C84 /* Support Files */,
+			);
+			name = BFPaperButton;
+			path = BFPaperButton;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7B8C05291FF46BAFEAAAFD65FE0CB64C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				320DE2A5B88F4F87F3B93FEAF9083CBB /* Pods-ProjectSelfieDiary */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A82CFEABBF2933676C56EA9F012B3A45 /* Pods */,
+				C9E99A9EE0A2EDE44AA09B3E456D9E76 /* Products */,
+				7B8C05291FF46BAFEAAAFD65FE0CB64C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A82CFEABBF2933676C56EA9F012B3A45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6653AC39BA99D9F0FAE451B8001E75F3 /* BFPaperButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9E99A9EE0A2EDE44AA09B3E456D9E76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				741D02BA3EC12BD439533AAEE478A081 /* BFPaperButton.framework */,
+				7AD8A47AEB23AE7F2CB04A2E72E5BF41 /* Pods_ProjectSelfieDiary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9817DF14EEF9C357B67C91EFC18C9612 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F7705A141850E292B9CBE63B7D0C33 /* Pods-ProjectSelfieDiary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7FAA6E112641FBF33889C93501D8FE1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17C718CA3D36C65305618530ADE3CCA8 /* BFPaperButton-umbrella.h in Headers */,
+				DEA2AEF28562AD6951D233089709E705 /* BFPaperButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AD0BB4A92A7E15CDA2D402E6AF3639E /* BFPaperButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5028EEC792B052877AACAAA6CCEBF5 /* Build configuration list for PBXNativeTarget "BFPaperButton" */;
+			buildPhases = (
+				58ED52010260D07AEB2E5406948C754A /* Sources */,
+				9028771DF9653AC8BC73B225852343ED /* Frameworks */,
+				D7FAA6E112641FBF33889C93501D8FE1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BFPaperButton;
+			productName = BFPaperButton;
+			productReference = 741D02BA3EC12BD439533AAEE478A081 /* BFPaperButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75B3EC5CF173CCE38F148023AA7F6B3B /* Pods-ProjectSelfieDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D1A1199D7FF7AEAFB4BDA99EED6F3C /* Build configuration list for PBXNativeTarget "Pods-ProjectSelfieDiary" */;
+			buildPhases = (
+				33F0F7FC66F1EBC406521A6FAEE70EF2 /* Sources */,
+				1C7C7028676C3A6A5536CD5080E9059A /* Frameworks */,
+				9817DF14EEF9C357B67C91EFC18C9612 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B272D6035DBA5D75A253D94D0434CE8D /* PBXTargetDependency */,
+			);
+			name = "Pods-ProjectSelfieDiary";
+			productName = "Pods-ProjectSelfieDiary";
+			productReference = 7AD8A47AEB23AE7F2CB04A2E72E5BF41 /* Pods_ProjectSelfieDiary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C9E99A9EE0A2EDE44AA09B3E456D9E76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AD0BB4A92A7E15CDA2D402E6AF3639E /* BFPaperButton */,
+				75B3EC5CF173CCE38F148023AA7F6B3B /* Pods-ProjectSelfieDiary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33F0F7FC66F1EBC406521A6FAEE70EF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1E6808B4645087656F98D72398C7EC /* Pods-ProjectSelfieDiary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58ED52010260D07AEB2E5406948C754A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B74132BFB0940A10B09CF5D4F86C2F8 /* BFPaperButton-dummy.m in Sources */,
+				374950D0E01AE1218457FA953F1B1965 /* BFPaperButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B272D6035DBA5D75A253D94D0434CE8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BFPaperButton;
+			target = 0AD0BB4A92A7E15CDA2D402E6AF3639E /* BFPaperButton */;
+			targetProxy = 16EE25550BD61A63D8CBE49099475528 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		028E506FC798472BAFA1DAF05AE05C7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BFPaperButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BFPaperButton/BFPaperButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BFPaperButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B7B77A886B98C43B694EFBDE4DE1919C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9399F0BFEF95277EEC2FE1D4E29EDD55 /* Pods-ProjectSelfieDiary.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ProjectSelfieDiary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ProjectSelfieDiary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5606A5C0F8F1C44954FD55AEA754C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06E1037EB3825F3393B4CA89B77B274C /* BFPaperButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BFPaperButton/BFPaperButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BFPaperButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BFPaperButton/BFPaperButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BFPaperButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5AFC20059A9CA97F7B2215B44C02B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E226E5C90147FC354B28C2801C366B0E /* Pods-ProjectSelfieDiary.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ProjectSelfieDiary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ProjectSelfieDiary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36D1A1199D7FF7AEAFB4BDA99EED6F3C /* Build configuration list for PBXNativeTarget "Pods-ProjectSelfieDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7B77A886B98C43B694EFBDE4DE1919C /* Debug */,
+				F5AFC20059A9CA97F7B2215B44C02B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB5028EEC792B052877AACAAA6CCEBF5 /* Build configuration list for PBXNativeTarget "BFPaperButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028E506FC798472BAFA1DAF05AE05C7B /* Debug */,
+				E5606A5C0F8F1C44954FD55AEA754C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
