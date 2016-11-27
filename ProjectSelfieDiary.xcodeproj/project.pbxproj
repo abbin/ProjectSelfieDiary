@@ -12,6 +12,8 @@
 		EDD6484E1DE9EB8000D1F418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD6484C1DE9EB8000D1F418 /* Main.storyboard */; };
 		EDD648501DE9EB8000D1F418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD6484F1DE9EB8000D1F418 /* Assets.xcassets */; };
 		EDD648531DE9EB8000D1F418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD648511DE9EB8000D1F418 /* LaunchScreen.storyboard */; };
+		EDD6485E1DE9EE1900D1F418 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6485C1DE9EE1900D1F418 /* PreviewView.swift */; };
+		EDD6485F1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6485D1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		EDD6484F1DE9EB8000D1F418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDD648521DE9EB8000D1F418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDD648541DE9EB8000D1F418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDD6485C1DE9EE1900D1F418 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		EDD6485D1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 			children = (
 				EDD648481DE9EB8000D1F418 /* AppDelegate.swift */,
 				EDD6484A1DE9EB8000D1F418 /* ViewController.swift */,
+				EDD6485C1DE9EE1900D1F418 /* PreviewView.swift */,
+				EDD6485D1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift */,
 				EDD6484C1DE9EB8000D1F418 /* Main.storyboard */,
-				EDD6484F1DE9EB8000D1F418 /* Assets.xcassets */,
 				EDD648511DE9EB8000D1F418 /* LaunchScreen.storyboard */,
+				EDD6484F1DE9EB8000D1F418 /* Assets.xcassets */,
 				EDD648541DE9EB8000D1F418 /* Info.plist */,
 			);
 			path = ProjectSelfieDiary;
@@ -139,6 +145,8 @@
 			files = (
 				EDD6484B1DE9EB8000D1F418 /* ViewController.swift in Sources */,
 				EDD648491DE9EB8000D1F418 /* AppDelegate.swift in Sources */,
+				EDD6485F1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift in Sources */,
+				EDD6485E1DE9EE1900D1F418 /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +212,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -263,6 +271,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectSelfieDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbinvarghese.ProjectSelfieDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +285,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectSelfieDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbinvarghese.ProjectSelfieDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";

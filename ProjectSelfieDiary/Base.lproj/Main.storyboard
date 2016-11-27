@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectSelfieDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,94 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-x0-Pmc" customClass="PreviewView" customModule="ProjectSelfieDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-1" width="375" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YFp-x0-Pmc" secondAttribute="height" multiplier="3:4" id="AYU-VN-1e9"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4dM-nJ-8xU" appends="YES" id="IYL-on-EbA"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiT-QB-JWC">
+                                <rect key="frame" x="0.0" y="499" width="375" height="168"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-Bu-XwY">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vyu-Bu-XwY" secondAttribute="height" id="hvb-do-alQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <state key="normal" title="G">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.29730179909999999" green="0.84926223749999996" blue="0.39087057110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0b6-22-NsF">
+                                        <rect key="frame" x="0.0" y="84" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0b6-22-NsF" secondAttribute="height" multiplier="1:1" id="l1h-uo-ZbP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                        <state key="normal" title="S">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR6-nf-7AG">
+                                        <rect key="frame" x="84" y="0.0" width="291" height="168"/>
+                                        <state key="normal" image="ShutterButton"/>
+                                        <connections>
+                                            <action selector="capturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuF-lZ-Em7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="iR6-nf-7AG" firstAttribute="top" secondItem="IiT-QB-JWC" secondAttribute="top" id="HOa-Hu-GCz"/>
+                                    <constraint firstAttribute="bottom" secondItem="0b6-22-NsF" secondAttribute="bottom" id="LdW-wQ-DLh"/>
+                                    <constraint firstItem="0b6-22-NsF" firstAttribute="top" secondItem="vyu-Bu-XwY" secondAttribute="bottom" id="NiY-A6-qZv"/>
+                                    <constraint firstAttribute="trailing" secondItem="iR6-nf-7AG" secondAttribute="trailing" id="OOT-55-MqK"/>
+                                    <constraint firstItem="0b6-22-NsF" firstAttribute="height" secondItem="vyu-Bu-XwY" secondAttribute="height" id="YEg-1O-vSk"/>
+                                    <constraint firstAttribute="bottom" secondItem="iR6-nf-7AG" secondAttribute="bottom" id="bjt-YR-Dt2"/>
+                                    <constraint firstItem="vyu-Bu-XwY" firstAttribute="top" secondItem="IiT-QB-JWC" secondAttribute="top" id="iX0-e3-OdI"/>
+                                    <constraint firstItem="vyu-Bu-XwY" firstAttribute="leading" secondItem="IiT-QB-JWC" secondAttribute="leading" id="ki4-F9-EcY"/>
+                                    <constraint firstItem="0b6-22-NsF" firstAttribute="leading" secondItem="IiT-QB-JWC" secondAttribute="leading" id="tE8-2y-MEU"/>
+                                    <constraint firstItem="iR6-nf-7AG" firstAttribute="leading" secondItem="0b6-22-NsF" secondAttribute="trailing" id="xqS-pV-ppV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IiT-QB-JWC" secondAttribute="bottom" id="5Hh-z7-oM5"/>
+                            <constraint firstItem="YFp-x0-Pmc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-1" id="EaW-pE-4wg"/>
+                            <constraint firstAttribute="trailing" secondItem="IiT-QB-JWC" secondAttribute="trailing" id="dGA-67-RbC"/>
+                            <constraint firstItem="YFp-x0-Pmc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i2D-a6-c74"/>
+                            <constraint firstAttribute="trailing" secondItem="YFp-x0-Pmc" secondAttribute="trailing" id="mQZ-7C-1II"/>
+                            <constraint firstItem="IiT-QB-JWC" firstAttribute="top" secondItem="YFp-x0-Pmc" secondAttribute="bottom" id="oj1-Qy-eWq"/>
+                            <constraint firstItem="IiT-QB-JWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wet-I8-sLW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoButton" destination="iR6-nf-7AG" id="lJU-9p-Hj2"/>
+                        <outlet property="previewView" destination="YFp-x0-Pmc" id="U69-99-f32"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4dM-nJ-8xU">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="BYZ-38-t0r" id="qbc-x5-lcH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-84" y="86.806596701649184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ShutterButton" width="249" height="142"/>
+    </resources>
 </document>
