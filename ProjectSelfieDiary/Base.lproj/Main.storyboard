@@ -117,19 +117,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tnn-9V-fWm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="499.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Tnn-9V-fWm" secondAttribute="height" multiplier="3:4" id="HVI-on-0JR"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGP-xi-ng0">
-                                <rect key="frame" x="0.0" y="499.5" width="187.5" height="167.5"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGP-xi-ng0">
+                                <rect key="frame" x="0.0" y="500" width="187.5" height="167"/>
+                                <state key="normal" image="Close"/>
+                                <state key="highlighted" image="CloseHighlight"/>
+                                <connections>
+                                    <action selector="dismissWithoutSaving:" destination="wT4-wn-ZBC" eventType="touchUpInside" id="uH2-zX-yD9"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRd-SA-KXQ">
-                                <rect key="frame" x="187.5" y="499.5" width="187.5" height="167.5"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRd-SA-KXQ">
+                                <rect key="frame" x="187.5" y="500" width="187.5" height="167"/>
+                                <state key="normal" title="Button" image="OK"/>
+                                <state key="highlighted" image="OKHighlight"/>
+                                <connections>
+                                    <action selector="dismissAndSave:" destination="wT4-wn-ZBC" eventType="touchUpInside" id="bcS-RF-7aD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,8 +165,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Close" width="206" height="184"/>
+        <image name="CloseHighlight" width="206" height="184"/>
         <image name="Gallery" width="92" height="92"/>
         <image name="GalleryHighlight" width="92" height="92"/>
+        <image name="OK" width="645" height="576"/>
+        <image name="OKHighlight" width="206" height="184"/>
         <image name="Settings" width="92" height="92"/>
         <image name="SettingsHighlight" width="92" height="92"/>
         <image name="ShutterButton" width="321" height="185"/>
