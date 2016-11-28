@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                 photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String : photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
             }
             
-            let photoCaptureDelegate = PhotoCaptureDelegate(with: photoSettings, willCapturePhotoAnimation: {
+            let photoCaptureDelegate = PhotoCaptureDelegate(with: self, requestedPhotoSettings: photoSettings, willCapturePhotoAnimation: {
                 DispatchQueue.main.async { [unowned self] in
                     self.previewView.videoPreviewLayer.opacity = 0
                     UIView.animate(withDuration: 0.25) { [unowned self] in

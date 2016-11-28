@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B45BA1FE9B442FB9128B84FC /* Pods_ProjectSelfieDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */; };
+		ED9A41651DEC163200CE5780 /* PSDPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */; };
 		EDD648491DE9EB8000D1F418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD648481DE9EB8000D1F418 /* AppDelegate.swift */; };
 		EDD6484B1DE9EB8000D1F418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6484A1DE9EB8000D1F418 /* ViewController.swift */; };
 		EDD6484E1DE9EB8000D1F418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD6484C1DE9EB8000D1F418 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		2FE8F1A5C5BB2B2CEF1D4A16 /* Pods-ProjectSelfieDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSelfieDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSelfieDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EE67AB5348BC862DD06227 /* Pods-ProjectSelfieDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSelfieDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.release.xcconfig"; sourceTree = "<group>"; };
+		ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDPreviewViewController.swift; sourceTree = "<group>"; };
 		EDD648451DE9EB8000D1F418 /* ProjectSelfieDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSelfieDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD648481DE9EB8000D1F418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD6484A1DE9EB8000D1F418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				EDD648481DE9EB8000D1F418 /* AppDelegate.swift */,
 				EDD6484A1DE9EB8000D1F418 /* ViewController.swift */,
+				ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */,
 				EDD6485C1DE9EE1900D1F418 /* PreviewView.swift */,
 				EDD6485D1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift */,
 				EDD6484C1DE9EB8000D1F418 /* Main.storyboard */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD6484B1DE9EB8000D1F418 /* ViewController.swift in Sources */,
+				ED9A41651DEC163200CE5780 /* PSDPreviewViewController.swift in Sources */,
 				EDD648491DE9EB8000D1F418 /* AppDelegate.swift in Sources */,
 				EDD6485F1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift in Sources */,
 				EDD6485E1DE9EE1900D1F418 /* PreviewView.swift in Sources */,
@@ -354,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbinvarghese.ProjectSelfieDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -369,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbinvarghese.ProjectSelfieDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

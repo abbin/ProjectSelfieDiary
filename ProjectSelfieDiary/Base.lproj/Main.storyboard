@@ -104,6 +104,57 @@
             </objects>
             <point key="canvasLocation" x="-84" y="86.806596701649184"/>
         </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="Y1A-SD-8Lh">
+            <objects>
+                <viewController storyboardIdentifier="PSDPreviewViewController" id="wT4-wn-ZBC" customClass="PSDPreviewViewController" customModule="ProjectSelfieDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kfb-wp-llD"/>
+                        <viewControllerLayoutGuide type="bottom" id="T23-a9-ERx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rlX-j6-wWf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tnn-9V-fWm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="499.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tnn-9V-fWm" secondAttribute="height" multiplier="3:4" id="HVI-on-0JR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGP-xi-ng0">
+                                <rect key="frame" x="0.0" y="499.5" width="187.5" height="167.5"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRd-SA-KXQ">
+                                <rect key="frame" x="187.5" y="499.5" width="187.5" height="167.5"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tnn-9V-fWm" firstAttribute="leading" secondItem="rlX-j6-wWf" secondAttribute="leading" id="2uc-HD-7rp"/>
+                            <constraint firstItem="NRd-SA-KXQ" firstAttribute="width" secondItem="lGP-xi-ng0" secondAttribute="width" id="5YM-1m-7nS"/>
+                            <constraint firstAttribute="trailing" secondItem="NRd-SA-KXQ" secondAttribute="trailing" id="7iU-VU-7SK"/>
+                            <constraint firstItem="Tnn-9V-fWm" firstAttribute="top" secondItem="rlX-j6-wWf" secondAttribute="top" id="8tJ-ff-Jrh"/>
+                            <constraint firstItem="lGP-xi-ng0" firstAttribute="top" secondItem="Tnn-9V-fWm" secondAttribute="bottom" id="EJx-9r-PRP"/>
+                            <constraint firstItem="NRd-SA-KXQ" firstAttribute="top" secondItem="Tnn-9V-fWm" secondAttribute="bottom" id="Egq-Vm-uLH"/>
+                            <constraint firstItem="lGP-xi-ng0" firstAttribute="leading" secondItem="rlX-j6-wWf" secondAttribute="leading" id="QiR-Xz-yOu"/>
+                            <constraint firstAttribute="trailing" secondItem="Tnn-9V-fWm" secondAttribute="trailing" id="Xr2-mO-Xv3"/>
+                            <constraint firstItem="NRd-SA-KXQ" firstAttribute="leading" secondItem="lGP-xi-ng0" secondAttribute="trailing" id="fMT-dN-GTw"/>
+                            <constraint firstItem="T23-a9-ERx" firstAttribute="top" secondItem="NRd-SA-KXQ" secondAttribute="bottom" id="n8m-Cy-yTL"/>
+                            <constraint firstItem="T23-a9-ERx" firstAttribute="top" secondItem="lGP-xi-ng0" secondAttribute="bottom" id="ser-BF-3Sb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewImageView" destination="Tnn-9V-fWm" id="baC-yd-1fc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bV1-o8-nha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="87"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Gallery" width="92" height="92"/>

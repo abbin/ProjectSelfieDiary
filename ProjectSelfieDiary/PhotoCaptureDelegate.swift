@@ -18,11 +18,14 @@ class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
 	private let completed: (PhotoCaptureDelegate) -> ()
 	
 	private var photoData: Data? = nil
+    
+    private let delegateController: UIViewController?
 
-	init(with requestedPhotoSettings: AVCapturePhotoSettings, willCapturePhotoAnimation: @escaping () -> (), capturingLivePhoto: @escaping (Bool) -> (), completed: @escaping (PhotoCaptureDelegate) -> ()) {
+	init(with controller: UIViewController, requestedPhotoSettings: AVCapturePhotoSettings, willCapturePhotoAnimation: @escaping () -> (), capturingLivePhoto: @escaping (Bool) -> (), completed: @escaping (PhotoCaptureDelegate) -> ()) {
 		self.requestedPhotoSettings = requestedPhotoSettings
 		self.willCapturePhotoAnimation = willCapturePhotoAnimation
 		self.completed = completed
+        self.delegateController = controller
 	}
 	
 	private func didFinish() {
@@ -55,25 +58,31 @@ class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
 			didFinish()
 			return
 		}
-		
-		PHPhotoLibrary.requestAuthorization { [unowned self] status in
-			if status == .authorized {
-				PHPhotoLibrary.shared().performChanges({
-                    let creationRequest = PHAssetCreationRequest.forAsset()
-						creationRequest.addResource(with: .photo, data: photoData, options: nil)
-					
-                    }, completionHandler: { [unowned self] success, error in
-						if let error = error {
-							print("Error occurered while saving photo to photo library: \(error)")
-						}
-						
-						self.didFinish()
-					}
-				)
-			}
-			else {
-				self.didFinish()
-			}
-		}
+        
+        let convertedImage = UIImage(data:photoData,scale:1.0)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "PSDPreviewViewController") as! PSDPreviewViewController
+        controller.previewImage = convertedImage
+        self.delegateController?.present(controller, animated: false, completion: nil)
+        
+//		PHPhotoLibrary.requestAuthorization { [unowned self] status in
+//			if status == .authorized {
+//				PHPhotoLibrary.shared().performChanges({
+//                    let creationRequest = PHAssetCreationRequest.forAsset()
+//						creationRequest.addResource(with: .photo, data: photoData, options: nil)
+//					
+//                    }, completionHandler: { [unowned self] success, error in
+//						if let error = error {
+//							print("Error occurered while saving photo to photo library: \(error)")
+//						}
+//						
+//						self.didFinish()
+//					}
+//				)
+//			}
+//			else {
+//				self.didFinish()
+//			}
+//		}
 	}
 }
