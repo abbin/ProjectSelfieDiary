@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B45BA1FE9B442FB9128B84FC /* Pods_ProjectSelfieDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */; };
 		ED9A41651DEC163200CE5780 /* PSDPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */; };
+		EDB897191DEC7609003CBF90 /* PSDSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */; };
+		EDB8971B1DEC7641003CBF90 /* PSGGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */; };
 		EDD648491DE9EB8000D1F418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD648481DE9EB8000D1F418 /* AppDelegate.swift */; };
 		EDD6484B1DE9EB8000D1F418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6484A1DE9EB8000D1F418 /* ViewController.swift */; };
 		EDD6484E1DE9EB8000D1F418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD6484C1DE9EB8000D1F418 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSelfieDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EE67AB5348BC862DD06227 /* Pods-ProjectSelfieDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSelfieDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.release.xcconfig"; sourceTree = "<group>"; };
 		ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDPreviewViewController.swift; sourceTree = "<group>"; };
+		EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDSettingsViewController.swift; sourceTree = "<group>"; };
+		EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSGGalleryViewController.swift; sourceTree = "<group>"; };
 		EDD648451DE9EB8000D1F418 /* ProjectSelfieDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSelfieDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD648481DE9EB8000D1F418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD6484A1DE9EB8000D1F418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				EDD648481DE9EB8000D1F418 /* AppDelegate.swift */,
 				EDD6484A1DE9EB8000D1F418 /* ViewController.swift */,
 				ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */,
+				EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */,
+				EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */,
 				EDD6485C1DE9EE1900D1F418 /* PreviewView.swift */,
 				EDD6485D1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift */,
 				EDD6484C1DE9EB8000D1F418 /* Main.storyboard */,
@@ -223,9 +229,11 @@
 			files = (
 				EDD6484B1DE9EB8000D1F418 /* ViewController.swift in Sources */,
 				ED9A41651DEC163200CE5780 /* PSDPreviewViewController.swift in Sources */,
+				EDB8971B1DEC7641003CBF90 /* PSGGalleryViewController.swift in Sources */,
 				EDD648491DE9EB8000D1F418 /* AppDelegate.swift in Sources */,
 				EDD6485F1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift in Sources */,
 				EDD6485E1DE9EE1900D1F418 /* PreviewView.swift in Sources */,
+				EDB897191DEC7609003CBF90 /* PSDSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

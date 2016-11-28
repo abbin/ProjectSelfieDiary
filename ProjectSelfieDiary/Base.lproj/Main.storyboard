@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,6 +45,9 @@
                                         </constraints>
                                         <state key="normal" image="Gallery"/>
                                         <state key="highlighted" image="GalleryHighlight"/>
+                                        <connections>
+                                            <segue destination="APY-1e-Gpp" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="mWJ-aT-zRa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoJ-rN-7Jm">
                                         <rect key="frame" x="0.0" y="84" width="84" height="84"/>
@@ -53,6 +57,9 @@
                                         </constraints>
                                         <state key="normal" image="Settings"/>
                                         <state key="highlighted" image="SettingsHighlight"/>
+                                        <connections>
+                                            <segue destination="g4i-Kc-V2l" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="RHm-xe-bpK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-bB-4WW">
                                         <rect key="frame" x="84" y="0.0" width="291" height="168"/>
@@ -103,6 +110,128 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-84" y="86.806596701649184"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="i8B-Jr-tkx">
+            <objects>
+                <viewController id="APY-1e-Gpp" customClass="PSGGalleryViewController" customModule="ProjectSelfieDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wY0-jB-Tgi"/>
+                        <viewControllerLayoutGuide type="bottom" id="eds-uW-3oi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P7d-zB-AzF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D96-Wc-nxF">
+                                <rect key="frame" x="0.0" y="8" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fka-QM-gov"/>
+                                    <constraint firstAttribute="width" constant="50" id="vNJ-PI-wLE"/>
+                                </constraints>
+                                <state key="normal" image="ButtonClose"/>
+                                <connections>
+                                    <action selector="dismissGallery:" destination="APY-1e-Gpp" eventType="touchUpInside" id="VzX-Ky-wAf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D96-Wc-nxF" firstAttribute="leading" secondItem="P7d-zB-AzF" secondAttribute="leading" id="bp5-D4-Hkq"/>
+                            <constraint firstItem="D96-Wc-nxF" firstAttribute="top" secondItem="P7d-zB-AzF" secondAttribute="top" constant="8" id="g4l-8Z-Kp5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXU-mi-WWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="87"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="rWE-y6-gnA">
+            <objects>
+                <viewController id="g4i-Kc-V2l" customClass="PSDSettingsViewController" customModule="ProjectSelfieDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jx9-7t-Uta"/>
+                        <viewControllerLayoutGuide type="bottom" id="VLl-DI-UtQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dk7-Kf-yLh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9A-ys-qCS">
+                                <rect key="frame" x="0.0" y="8" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uhn-jv-ejg"/>
+                                    <constraint firstAttribute="width" constant="50" id="fVu-MD-jSU"/>
+                                </constraints>
+                                <state key="normal" image="ButtonClose"/>
+                                <connections>
+                                    <action selector="dismissSettings:" destination="g4i-Kc-V2l" eventType="touchUpInside" id="M2V-vO-TI5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACKUP &amp; SYNC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLX-nT-9bw">
+                                <rect key="frame" x="16" y="78" width="81" height="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
+                                <color key="textColor" white="0.539306640625" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SettingsSelect" translatesAutoresizingMaskIntoConstraints="NO" id="uWp-ru-zeU">
+                                <rect key="frame" x="16" y="98" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WdI-Yx-mYw"/>
+                                    <constraint firstAttribute="width" constant="30" id="zmv-cG-cPm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-2W-IhR">
+                                <rect key="frame" x="54" y="98" width="151" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="BACK UP TO CLOUD">
+                                    <color key="titleColor" white="0.26481119791666669" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Djs-1H-AGX">
+                                <rect key="frame" x="16" y="136" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YkD-Wi-IsB"/>
+                                    <constraint firstAttribute="width" constant="30" id="ann-5k-QTo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xeb-uj-lDI">
+                                <rect key="frame" x="54" y="136" width="213" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="DO NOT BACK UP TO CLOUD">
+                                    <color key="titleColor" white="0.53765190972222221" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkF-nl-yX6">
+                                <rect key="frame" x="16" y="197" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uWp-ru-zeU" firstAttribute="top" secondItem="CLX-nT-9bw" secondAttribute="bottom" constant="8" id="6ca-2N-0P0"/>
+                            <constraint firstItem="CLX-nT-9bw" firstAttribute="leading" secondItem="Dk7-Kf-yLh" secondAttribute="leadingMargin" id="9b7-Ph-iNl"/>
+                            <constraint firstItem="uWp-ru-zeU" firstAttribute="leading" secondItem="Dk7-Kf-yLh" secondAttribute="leadingMargin" id="9cd-Hr-rhT"/>
+                            <constraint firstItem="Xeb-uj-lDI" firstAttribute="centerY" secondItem="Djs-1H-AGX" secondAttribute="centerY" id="JNk-FM-I6J"/>
+                            <constraint firstItem="Djs-1H-AGX" firstAttribute="top" secondItem="1VE-2W-IhR" secondAttribute="bottom" constant="8" id="KkC-ZM-vCZ"/>
+                            <constraint firstItem="XkF-nl-yX6" firstAttribute="top" secondItem="Xeb-uj-lDI" secondAttribute="bottom" constant="20" id="WFS-8W-fxi"/>
+                            <constraint firstItem="CLX-nT-9bw" firstAttribute="top" secondItem="z9A-ys-qCS" secondAttribute="bottom" constant="20" id="X6k-F4-Uct"/>
+                            <constraint firstItem="1VE-2W-IhR" firstAttribute="leading" secondItem="uWp-ru-zeU" secondAttribute="trailing" constant="8" id="b0X-zM-Uug"/>
+                            <constraint firstItem="Djs-1H-AGX" firstAttribute="leading" secondItem="Dk7-Kf-yLh" secondAttribute="leadingMargin" id="ffg-eB-n1C"/>
+                            <constraint firstItem="Xeb-uj-lDI" firstAttribute="leading" secondItem="Djs-1H-AGX" secondAttribute="trailing" constant="8" id="idu-YR-6OZ"/>
+                            <constraint firstItem="z9A-ys-qCS" firstAttribute="top" secondItem="Dk7-Kf-yLh" secondAttribute="top" constant="8" id="k5W-Y9-JC1"/>
+                            <constraint firstItem="1VE-2W-IhR" firstAttribute="centerY" secondItem="uWp-ru-zeU" secondAttribute="centerY" id="t1N-Of-0kI"/>
+                            <constraint firstItem="z9A-ys-qCS" firstAttribute="leading" secondItem="Dk7-Kf-yLh" secondAttribute="leading" id="t5n-St-QkX"/>
+                            <constraint firstItem="XkF-nl-yX6" firstAttribute="leading" secondItem="Dk7-Kf-yLh" secondAttribute="leadingMargin" id="zCt-ux-7QT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ofh-mB-VW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="750.67466266866575"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="Y1A-SD-8Lh">
@@ -161,10 +290,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bV1-o8-nha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="87"/>
+            <point key="canvasLocation" x="628" y="-565"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ButtonClose" width="50" height="50"/>
         <image name="Close" width="206" height="184"/>
         <image name="CloseHighlight" width="206" height="184"/>
         <image name="Gallery" width="92" height="92"/>
@@ -173,6 +303,7 @@
         <image name="OKHighlight" width="206" height="184"/>
         <image name="Settings" width="92" height="92"/>
         <image name="SettingsHighlight" width="92" height="92"/>
+        <image name="SettingsSelect" width="30" height="30"/>
         <image name="ShutterButton" width="321" height="185"/>
         <image name="ShutterButtonHighlight" width="321" height="185"/>
     </resources>
