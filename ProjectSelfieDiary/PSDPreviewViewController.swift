@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import Photos
+import PINCache
 
 class PSDPreviewViewController: UIViewController {
     
-    var previewImage: UIImage?
+    var previewImageData: Data?
+    let cache = PINCache.init(name: Constants.SettingsCacheName)
+    let galleryCache = PINCache.init(name: Constants.GalleryCacheName)
     
     @IBOutlet weak var previewImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        previewImageView.image = previewImage
+        let convertedImage = UIImage.init(data: previewImageData!)
+        let flipedImage = UIImage.init(cgImage: (convertedImage?.cgImage!)!, scale: (convertedImage?.scale)!, orientation: .leftMirrored)
+        previewImageView.image = flipedImage
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,18 +33,48 @@ class PSDPreviewViewController: UIViewController {
     @IBAction func dismissWithoutSaving(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func dismissAndSave(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            DispatchQueue.global(qos: .background).async {
+                self.saveToPhotoLibrary()
+                let image :UIImage = self.previewImageView.image!
+                
+                if let imageArray :NSMutableArray = self.galleryCache.object(forKey: Constants.GalleryimageArray) as? NSMutableArray{
+                    imageArray.add(image)
+                    self.galleryCache.setObject(imageArray, forKey: Constants.GalleryimageArray)
+                }
+                else{
+                    let imageArray :NSMutableArray = [image]
+                    self.galleryCache.setObject(imageArray, forKey: Constants.GalleryimageArray)
+                }
+            }
+        })
     }
-    /*
-    // MARK: - Navigation
+    
+    func saveToPhotoLibrary(){
+        let saveMediaSetting :SaveMediaSettings.RawValue = self.cache.object(forKey: Constants.SaveMediaSettings) as! SaveMediaSettings.RawValue
+        
+        if saveMediaSetting == SaveMediaSettings.SaveImagesIntoPhotos.rawValue {
+            
+            let doublFlipedImage = UIImage.init(cgImage: (self.previewImageView.image?.cgImage!)!, scale: (self.previewImageView.image?.scale)!, orientation: .rightMirrored)
+            let convertedData = UIImageJPEGRepresentation(doublFlipedImage, 1)
+            PHPhotoLibrary.requestAuthorization { status in
+                if status == .authorized {
+                    PHPhotoLibrary.shared().performChanges({
+                        let creationRequest = PHAssetCreationRequest.forAsset()
+                        creationRequest.addResource(with: .photo, data: convertedData!, options: nil)
+                        
+                    }, completionHandler: { success, error in
+                        if let error = error {
+                            print("Error occurered while saving photo to photo library: \(error)")
+                        }
+                    }
+                    )
+                }
+            }
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
-
 }
+

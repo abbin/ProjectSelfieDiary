@@ -122,6 +122,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ixO-GO-ooL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="2" id="oBk-Vl-O4K">
+                                    <size key="itemSize" width="134" height="141"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PSDGalleryCollectionViewCell" id="hr0-gw-8hK" customClass="PSDGalleryCollectionViewCell" customModule="ProjectSelfieDiary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="134" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gN8-5p-IrV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="134" height="141"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gN8-5p-IrV" firstAttribute="top" secondItem="hr0-gw-8hK" secondAttribute="top" id="0kO-aU-xg6"/>
+                                            <constraint firstItem="gN8-5p-IrV" firstAttribute="leading" secondItem="hr0-gw-8hK" secondAttribute="leading" id="0qd-0d-ylu"/>
+                                            <constraint firstAttribute="bottom" secondItem="gN8-5p-IrV" secondAttribute="bottom" id="7BC-WE-tGs"/>
+                                            <constraint firstAttribute="trailing" secondItem="gN8-5p-IrV" secondAttribute="trailing" id="ULG-2C-W4f"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="gN8-5p-IrV" id="JDi-ac-pnn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="APY-1e-Gpp" id="BUG-Bu-zq5"/>
+                                    <outlet property="delegate" destination="APY-1e-Gpp" id="fWX-yT-Jp2"/>
+                                </connections>
+                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D96-Wc-nxF">
                                 <rect key="frame" x="0.0" y="8" width="50" height="50"/>
                                 <constraints>
@@ -136,14 +174,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ixO-GO-ooL" firstAttribute="leading" secondItem="P7d-zB-AzF" secondAttribute="leading" id="Jsg-fL-9eI"/>
+                            <constraint firstAttribute="bottom" secondItem="ixO-GO-ooL" secondAttribute="bottom" id="MbP-gM-09c"/>
+                            <constraint firstAttribute="trailing" secondItem="ixO-GO-ooL" secondAttribute="trailing" id="UGj-Rl-7qi"/>
                             <constraint firstItem="D96-Wc-nxF" firstAttribute="leading" secondItem="P7d-zB-AzF" secondAttribute="leading" id="bp5-D4-Hkq"/>
                             <constraint firstItem="D96-Wc-nxF" firstAttribute="top" secondItem="P7d-zB-AzF" secondAttribute="top" constant="8" id="g4l-8Z-Kp5"/>
+                            <constraint firstItem="ixO-GO-ooL" firstAttribute="top" secondItem="P7d-zB-AzF" secondAttribute="top" id="q4l-6J-1cp"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXU-mi-WWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="87"/>
+            <point key="canvasLocation" x="628" y="86.806596701649184"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="rWE-y6-gnA">

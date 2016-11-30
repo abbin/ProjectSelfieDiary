@@ -9,6 +9,8 @@
 import UIKit
 import CloudKit
 import PINCache
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !cache.containsObject(forKey: Constants.ReminderSettings) {
             cache.setObject(ReminderSettings.ReminderOff.rawValue, forKey: Constants.ReminderSettings)
         }
+        
+        Fabric.with([Crashlytics.self])
         
         return true
     }

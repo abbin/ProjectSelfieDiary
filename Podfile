@@ -8,5 +8,7 @@ target 'ProjectSelfieDiary' do
   # Pods for ProjectSelfieDiary
 
 pod 'PINCache'
+pod 'Fabric'
+pod 'Crashlytics'
 
 end

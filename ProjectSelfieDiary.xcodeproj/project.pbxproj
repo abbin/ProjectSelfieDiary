@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B45BA1FE9B442FB9128B84FC /* Pods_ProjectSelfieDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */; };
 		ED2535E21DEEAC53004A2632 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2535E11DEEAC53004A2632 /* CloudKit.framework */; };
+		ED2535E61DEF1A86004A2632 /* PSDGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2535E51DEF1A86004A2632 /* PSDGalleryCollectionViewCell.swift */; };
 		ED9A41651DEC163200CE5780 /* PSDPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */; };
 		EDB897191DEC7609003CBF90 /* PSDSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */; };
 		EDB8971B1DEC7641003CBF90 /* PSGGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */; };
@@ -27,6 +28,7 @@
 		C8EE67AB5348BC862DD06227 /* Pods-ProjectSelfieDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSelfieDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.release.xcconfig"; sourceTree = "<group>"; };
 		ED2535E01DEEAC44004A2632 /* ProjectSelfieDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectSelfieDiary.entitlements; sourceTree = "<group>"; };
 		ED2535E11DEEAC53004A2632 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ED2535E51DEF1A86004A2632 /* PSDGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDPreviewViewController.swift; sourceTree = "<group>"; };
 		EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDSettingsViewController.swift; sourceTree = "<group>"; };
 		EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSGGalleryViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */,
 				EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */,
 				EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */,
+				ED2535E51DEF1A86004A2632 /* PSDGalleryCollectionViewCell.swift */,
 				EDD6485C1DE9EE1900D1F418 /* PreviewView.swift */,
 				EDD6485D1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift */,
 				EDD6484C1DE9EB8000D1F418 /* Main.storyboard */,
@@ -122,6 +125,7 @@
 				EDD648431DE9EB8000D1F418 /* Resources */,
 				2F5503A40EC6981B55C07713 /* [CP] Embed Pods Frameworks */,
 				E43C5794CAB8432304463078 /* [CP] Copy Pods Resources */,
+				ED2535E71DEF1FF2004A2632 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -234,6 +238,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ED2535E71DEF1FF2004A2632 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 1786cf2c7ac82b5ec8a35411f91a89dc9de11d4e 4f1012b0d0ad5ec8e15d3f60b9ab6c6fd676085e54b39ce563bf5693b07f76c2";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -248,6 +265,7 @@
 				EDD6485F1DE9EE1900D1F418 /* PhotoCaptureDelegate.swift in Sources */,
 				EDD6485E1DE9EE1900D1F418 /* PreviewView.swift in Sources */,
 				EDB897191DEC7609003CBF90 /* PSDSettingsViewController.swift in Sources */,
+				ED2535E61DEF1A86004A2632 /* PSDGalleryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ProjectSelfieDiary/ProjectSelfieDiary.entitlements;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectSelfieDiary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

@@ -59,37 +59,11 @@ class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
 			return
 		}
         
-        let convertedImage = UIImage.init(data: photoData)
-        let flipedImage = UIImage.init(cgImage: (convertedImage?.cgImage!)!, scale: (convertedImage?.scale)!, orientation: .leftMirrored)
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "PSDPreviewViewController") as! PSDPreviewViewController
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
-        controller.previewImage = flipedImage
+        controller.previewImageData = photoData
         self.delegateController?.present(controller, animated: false, completion: nil)
-        
-//        let doublFlipedImage = UIImage.init(cgImage: (convertedImage?.cgImage!)!, scale: (convertedImage?.scale)!, orientation: .rightMirrored)
-//        let convertedData = UIImageJPEGRepresentation(doublFlipedImage, 1)
-//        
-//		PHPhotoLibrary.requestAuthorization { [unowned self] status in
-//			if status == .authorized {
-//				PHPhotoLibrary.shared().performChanges({
-//                    let creationRequest = PHAssetCreationRequest.forAsset()
-//						creationRequest.addResource(with: .photo, data: convertedData!, options: nil)
-//					
-//                    }, completionHandler: { [unowned self] success, error in
-//						if let error = error {
-//							print("Error occurered while saving photo to photo library: \(error)")
-//						}
-//						
-//						self.didFinish()
-//					}
-//				)
-//			}
-//			else {
-//				self.didFinish()
-//			}
-//		}
 	}
 }

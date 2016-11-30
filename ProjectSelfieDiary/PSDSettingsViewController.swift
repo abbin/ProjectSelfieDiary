@@ -10,6 +10,8 @@ import UIKit
 import PINCache
 
 struct Constants {
+    static let GalleryCacheName = "PSDGallery"
+    static let GalleryimageArray = "PSDGalleryimageArray"
     static let SettingsCacheName = "PSDSettings"
     static let BackupAndSyncSettings = "PSDBackupAndSyncSettings"
     static let SaveMediaSettings = "PSDSaveMediaSettings"
@@ -161,8 +163,10 @@ class PSDSettingsViewController: UIViewController {
             reminderOnImageView.image = nil
         }
         
-        let setDate :NSDate = cache.object(forKey: Constants.ReminderDate) as! NSDate
-        timePicker.setDate(setDate as Date, animated: false)
+        if let date :NSDate = cache.object(forKey: Constants.ReminderDate) as? NSDate{
+            timePicker.setDate(date as Date, animated: false)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
