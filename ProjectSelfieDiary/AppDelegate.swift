@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CloudKit
+import PINCache
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let cache = PINCache.init(name: Constants.SettingsCacheName)
+        if !cache.containsObject(forKey: Constants.BackupAndSyncSettings) {
+            CKContainer.default().accountStatus { (accountStatus, error) in
+                if accountStatus == .available {
+                    cache.setObject(BackupAndSyncSettings.BackUpToCloud.rawValue, forKey: Constants.BackupAndSyncSettings)
+                }
+                else{
+                    cache.setObject(BackupAndSyncSettings.DoNotBackUpToCloud.rawValue, forKey: Constants.BackupAndSyncSettings)
+                }
+            }
+        }
+        if !cache.containsObject(forKey: Constants.BackupAndSyncSettings){
+            cache.setObject(SaveMediaSettings.DoNotSaveIntoPhotos.rawValue, forKey: Constants.SaveMediaSettings)
+        }
+        if !cache.containsObject(forKey: Constants.ReminderSettings) {
+            cache.setObject(ReminderSettings.ReminderOff.rawValue, forKey: Constants.ReminderSettings)
+        }
+        
         return true
     }
 

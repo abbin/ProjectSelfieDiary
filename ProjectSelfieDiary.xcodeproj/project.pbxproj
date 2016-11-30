@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B45BA1FE9B442FB9128B84FC /* Pods_ProjectSelfieDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */; };
+		ED2535E21DEEAC53004A2632 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2535E11DEEAC53004A2632 /* CloudKit.framework */; };
 		ED9A41651DEC163200CE5780 /* PSDPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */; };
 		EDB897191DEC7609003CBF90 /* PSDSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */; };
 		EDB8971B1DEC7641003CBF90 /* PSGGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */; };
@@ -24,6 +25,8 @@
 		2FE8F1A5C5BB2B2CEF1D4A16 /* Pods-ProjectSelfieDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSelfieDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSelfieDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EE67AB5348BC862DD06227 /* Pods-ProjectSelfieDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSelfieDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSelfieDiary/Pods-ProjectSelfieDiary.release.xcconfig"; sourceTree = "<group>"; };
+		ED2535E01DEEAC44004A2632 /* ProjectSelfieDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectSelfieDiary.entitlements; sourceTree = "<group>"; };
+		ED2535E11DEEAC53004A2632 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDPreviewViewController.swift; sourceTree = "<group>"; };
 		EDB897181DEC7609003CBF90 /* PSDSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDSettingsViewController.swift; sourceTree = "<group>"; };
 		EDB8971A1DEC7641003CBF90 /* PSGGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSGGalleryViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45BA1FE9B442FB9128B84FC /* Pods_ProjectSelfieDiary.framework in Frameworks */,
+				ED2535E21DEEAC53004A2632 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 		5E5B47C05D7569BE8036D73B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED2535E11DEEAC53004A2632 /* CloudKit.framework */,
 				C4EFC385C544BAA318BFD7CD /* Pods_ProjectSelfieDiary.framework */,
 			);
 			name = Frameworks;
@@ -88,6 +93,7 @@
 		EDD648471DE9EB8000D1F418 /* ProjectSelfieDiary */ = {
 			isa = PBXGroup;
 			children = (
+				ED2535E01DEEAC44004A2632 /* ProjectSelfieDiary.entitlements */,
 				EDD648481DE9EB8000D1F418 /* AppDelegate.swift */,
 				EDD6484A1DE9EB8000D1F418 /* ViewController.swift */,
 				ED9A41641DEC163200CE5780 /* PSDPreviewViewController.swift */,
@@ -140,6 +146,14 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = EDXP6Y48QS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -359,6 +373,7 @@
 			baseConfigurationReference = 2FE8F1A5C5BB2B2CEF1D4A16 /* Pods-ProjectSelfieDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectSelfieDiary/ProjectSelfieDiary.entitlements;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectSelfieDiary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -375,6 +390,7 @@
 			baseConfigurationReference = C8EE67AB5348BC862DD06227 /* Pods-ProjectSelfieDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectSelfieDiary/ProjectSelfieDiary.entitlements;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectSelfieDiary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
